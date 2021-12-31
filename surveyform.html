@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+		<h1 id="title">Survey</h1>
+		<p id="description">Survey Description</p>
+		<form id="survey-form">
+			<label for="name" id="name-label">Name</label><br>
+			<input type="text" placeholder="Enter your name" id="name" name="name" required><br>
+			
+			<label for="email" id="email-label">Email</label><br>
+			<input type="email" placeholder="Enter your Email" id="email" name="email" required><br>
+			
+			<label for="number" id="number-label">How many jobs do you have currently?</label><br>
+			<input type="number" placeholder="Number of jobs" id="number" name="age" min="0" max="4" required><br>
+			
+			<label for="dropdown">You prefer to work</label><br>
+			<select id="dropdown">
+				<option value="remote">Remotely</option>
+				<option value="inperson">In-person</option>
+			</select><br>
+			
+			<label>Gender
+				<label for="male">Male</label>
+				<input type="radio" id="male" name="gender">
+				<input type="checkbox" name="it" value="it">
+				<label for="female">Female</label>
+				<input type="radio" id="female" name="gender">
+			</label><br>
+			
+			<label>What industries are working in?<br>
+				<input type="checkbox" name="hospitality" value="hospitality">
+				<label for="hospitality">hospitality</label><br>
+				<label for="it">information technology</label><br>
+				<input type="checkbox" name="medical" value="medical">
+				<label for="medical">Medical</label><br>
+				<input type="checkbox" name="construction" value="construction">
+				<label for="construction">Construction</label><br>
+				<input type="checkbox" name="others" value="others">
+				<label for="others">Others</label><br>
+			</label>
+
+			<textarea>Additional comment</textarea><br>
+
+			<button id="submit">Submit</button>
+		</form>
+	</body>
+</html>
