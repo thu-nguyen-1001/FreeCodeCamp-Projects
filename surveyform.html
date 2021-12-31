@@ -1,47 +1,98 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<style>
+			body {
+				font-family: Verdana, sans-serif;
+				background-image: url('images/form-background.jpeg');
+				backdrop-filter: blur(10px);
+				opacity: 0.8;
+				color: white;
+			}
+
+			h1 {
+				font-weight: lighter;
+			}
+
+			h1, p {
+				text-align: center;
+			}
+
+			form {
+				background-color: rgba(0, 0, 0, 0.7);
+				min-width: 200px;
+				width: 40%;
+				margin: 0 auto;
+				padding: 20px 40px;
+				display: flex;
+				flex-direction: column;
+				border-radius: 5px;
+			}
+
+			label {
+				font-size: 20px;
+				margin-top: 10px;
+			}
+
+			input, select, button {
+				font-size: 20px;
+				padding: 7px 0;
+				margin-top: 10px;
+				border-radius: 5px;
+			}
+
+			input, select, textarea {
+				padding-left: 7px;
+			}
+
+			textarea {
+				min-height: 100px;
+				font-size: 15px;
+			}
+		</style>
 	</head>
 	<body>
-		<h1 id="title">Survey</h1>
-		<p id="description">Survey Description</p>
+		<h1 id="title">Popular Jobs during COVID-19 Pandemic</h1>
+		<p id="description">Thank you for taking your time to complete the survey form</p>
 		<form id="survey-form">
-			<label for="name" id="name-label">Name</label><br>
-			<input type="text" placeholder="Enter your name" id="name" name="name" required><br>
+			<label for="name" id="name-label">Name</label>
+			<input type="text" placeholder="Enter your name" id="name" name="name" required>
 			
-			<label for="email" id="email-label">Email</label><br>
-			<input type="email" placeholder="Enter your Email" id="email" name="email" required><br>
+			<label for="email" id="email-label">Email</label>
+			<input type="email" placeholder="Enter your Email" id="email" name="email" required>
 			
-			<label for="number" id="number-label">How many jobs do you have currently?</label><br>
-			<input type="number" placeholder="Number of jobs" id="number" name="age" min="0" max="4" required><br>
+			<label for="number" id="number-label">How many jobs do you have currently?</label>
+			<input type="number" placeholder="Number of jobs" id="number" name="age" min="0" max="4" required>
 			
-			<label for="dropdown">You prefer to work</label><br>
+			<label for="dropdown">You prefer to work</label>
 			<select id="dropdown">
+				<option value="" disabled selected>Select an option</option>
 				<option value="remote">Remotely</option>
 				<option value="inperson">In-person</option>
-			</select><br>
+			</select>
 			
-			<label>Gender
+			<label>Gender<br>
 				<label for="male">Male</label>
-				<input type="radio" id="male" name="gender">
-				<input type="checkbox" name="it" value="it">
+				<input type="radio" id="male" name="gender" value="male" checked>
 				<label for="female">Female</label>
-				<input type="radio" id="female" name="gender">
-			</label><br>
+				<input type="radio" id="female" name="gender" value="female">
+			</label>
 			
 			<label>What industries are working in?<br>
 				<input type="checkbox" name="hospitality" value="hospitality">
 				<label for="hospitality">hospitality</label><br>
+				<input type="checkbox" name="it" value="it">
 				<label for="it">information technology</label><br>
 				<input type="checkbox" name="medical" value="medical">
 				<label for="medical">Medical</label><br>
 				<input type="checkbox" name="construction" value="construction">
 				<label for="construction">Construction</label><br>
 				<input type="checkbox" name="others" value="others">
-				<label for="others">Others</label><br>
+				<label for="others">Others</label>
 			</label>
 
-			<textarea>Additional comment</textarea><br>
+			<label for="comments">Other comments</label>
+			<textarea id="comments">Additional comment</textarea><br>
 
 			<button id="submit">Submit</button>
 		</form>
