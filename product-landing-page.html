@@ -1,7 +1,55 @@
+<!--
+	Freecodecamp project 3
+	Simulating a product landing page: 
+	https://codepen.io/freeCodeCamp/full/RKRbwL
+	By: Thu
+	Date: 12/01/01
+-->
+
 <!DOCTYPE html>
 <html>
 	<head>
+		<style>
+			a {
+  				text-decoration: none;
+			}
+
+			#nav-bar {
+  				display: flex;
+  				flex-direction: row;
+			}
+
+			@media (maxwidth: 600px) {
+  
+			}
+		</style>
 	</head>
 	<body>
+		<header id="header">
+		  	<img id="header-img" alt="logo" src="images/logo.png">
+		  	<nav id="nav-bar">
+		    	<a class="nav-link" href="#features">Features</a>
+		    	<a class="nav-link" href="#howitworks">How It Works</a>
+		   	 	<a class="nav-link" href="#pricing">Pricing</a>
+		  	</nav>
+		<header>
+		<main>
+		  	<div class="container">
+		    	<h3>Get your own portrait</h3>
+		    	<form id="form" action="https://www.freecodecamp.org/email-submit" method="POST">
+		      		<input id="email" type="email" placeholder="Enter your email address" required>
+		      		<input id="submit" type="submit" value="SUBMIT">
+		    	</form>
+		  	</div>
+		  	<div class="container">
+		    	<section id="features"></section>
+		    	<section id="howitworks">
+		      		<video id="video" width="320" height="240" controls>
+		        		<source src="https://www.youtube.com/watch?v=-c3L90nsesw" type="video/mpeg">  
+		      		<video>
+		    	</section>
+		    	<section id="pricing"></section>
+		  	</div>
+		</main>
 	</body>
 </html>
