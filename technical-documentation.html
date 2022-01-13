@@ -1,15 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+		:root {
+			font-family: Vernada, sans-serif;
+		}
+		
+		a {
+			text-decoration: none;
+			color: white;
+		}
+
+		body {
+			display: flex;
+			flex-direction: row;
+		}
+
+		header {
+			font-size: 28px;
+		}
+
+		#navbar {
+			display: flex;
+			flex-direction: column;
+			width: 40%;
+			min-width: 200px;
+			background-color: darkgray;
+		}
+
+		#navbar header {
+			text-align: center;
+			color: white;
+			padding: 1em 0;
+		}
+
+		#navbar a {
+			padding: 1em 0 1em 1em;
+			border: solid 1px gray;
+			border-collapse: collapse;
+		}
+
+		#navbar a:hover {
+			background-color: black;
+		}
+
+		main {
+			padding: 1em 0 0 2em;
+		}
+
+		#codeblock {
+			background-color: lightgray;
+			padding: 1em 0 1em 2em;
+		}
+
+		@media (max-width: 600px) {
+			body {
+				display: flex;
+				flex-direction: column;
+			}
+			#navbar {
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+			}
+		}
+	</style>
 </head>
 <body>
 	<nav id="navbar">
 		<header>Kotlin Docs</header>
-		<a href=""></a>
-		<a></a>
-		<a></a>
-		<a></a>
-		<a></a>
+		<a class="nav-link" href="#Kotlin_Overview">Kotlin Overview</a>
+		<a class="nav-link" href="#What's_new_in_Kotlin">What's new in Kotlin</a>
+		<a class="nav-link" href="#Basics">Basics</a>
+		<a class="nav-link" href="#Concepts">Concepts</a>
+		<a class="nav-link" href="#Multiplatform_programming">Multiplatform Programming</a>
 	</nav>
 	<main id="main-doc">
 		<section class="main-section" id="Kotlin_Overview">
@@ -30,27 +94,62 @@
 		</section>
 		<section class="main-section" id="Basics">
 			<header>Basics</header>
-			<p>This is a collection of basic syntax elements with examples. At the end of every section, you'll find a link to a detailed description of the related topic.</p>		
+			<p>This is a collection of basic syntax elements with examples. At the end of every section, you'll find a link to a detailed description of the related topic.</p>
+
 			<h3>Package definition and imports﻿</h3>
 			<p>Package specification should be at the top of the source file.</p>
-			<code>package my.demo<br>
-			<br>	
-			import kotlin.text.*<br>
-			<br>
-			// ...
-			<br>
-			</code>
+			<div id="codeblock">
+				<code>package my.demo<br>
+				<br>	
+				import kotlin.text.*<br>
+				<br>
+				// ...
+				<br>
+				</code>
+			</div>
 			<h3>Program entry point﻿</h3>
-			<p>An entry point of a Kotlin application is the main function.</p>
-			<code>fun main() {<br>
-    		println("Hello world!")<br>
-			}</code>
+			<p>An entry point of a Kotlin application is the <code>main</code> function.</p>
+			<div id="codeblock">
+				<code>
+					fun main() {<br>
+	    			&nbspprintln("Hello world!")<br>
+					}
+				</code>
+			</div>
+			<p>Another form of <code>main</code> accepts a variable number of String arguments.</p>
+			<div id="codeblock">
+				<code>
+					fun main(args: Array<String>) {		<br>
+	    			&nbspprintln(args.contentToString())<br>
+					}<br>
+				</code>
+			</div>
+			<h3>Print to the standard output﻿</h3>
+			<p><code>print</code> prints its argument to the standard output.</p>
+			<div id="codeblock">
+				<code>
+					print("Hello ")<br>
+					print("world!")<br>
+				</code>
+			</div>
+			<p><code>println</code> prints its arguments and adds a line break, so that the next thing you print appears on the next line.</p>
+			<div id="codeblock">
+				<code>
+					println("Hello world!")	<br>
+					println(42)				<br>
+				</code>
+			</div>
 		</section>
 		<section class="main-section" id="Concepts">
 			<header>Concepts</header>
+			<h3>Basic types</h3>
+			<p>In Kotlin, everything is an object in the sense that we can call member functions and properties on any variable. Some types can have a special internal representation - for example, numbers, characters and booleans can be represented as primitive values at runtime - but to the user they look like ordinary classes. In this section we describe the basic types used in Kotlin: numbers, booleans, characters, strings, and arrays.</p>
+			<h3>Type checks and casts</h3>
 		</section>
 		<section class="main-section" id="Multiplatform_programming">
 			<header>Multiplatform programming</header>
+			<h3>Kotlin Multiplatform</h3>
+			<p>Support for multiplatform programming is one of Kotlin’s key benefits. It reduces time spent writing and maintaining the same code for different platforms while retaining the flexibility and benefits of native programming. Learn more about Kotlin Multiplatform benefits.</p>
 		</section>
 	</main>
 </body>
