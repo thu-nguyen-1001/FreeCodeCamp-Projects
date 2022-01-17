@@ -10,16 +10,107 @@
 <html>
 	<head>
 		<style>
+			:root {
+				font-family: Arial;
+			}
+
 			a {
   				text-decoration: none;
+  				font-weight: bold;
+			}
+
+			h1, h3, a {
+				color: #758250;
+			}
+
+			header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			#header-img {
+				width: 150px;
+				height: 150px;
+				padding: 10px 10px;
 			}
 
 			#nav-bar {
-  				display: flex;
-  				flex-direction: row;
+  				padding: 40px 20px 0 0;
 			}
 
-			@media (maxwidth: 600px) {
+			#nav-bar a {
+				color: black;
+				margin-right: 40px;
+			}
+
+			main {
+				width: 100%;
+				margin-top: 150px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+			}
+
+			.container {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				margin: 10px auto;
+			}
+
+			#email {
+				width: 100%;
+				text-align: center;
+			}
+
+			input {
+				margin-top: 20px;
+				padding: 7px 7px;
+			}
+
+			#submit, button {
+				border: none;
+				background-color: #9AAE79;
+				color: white;
+				padding: 7px 7px;
+			} 
+
+			#features {
+				text-align: left;
+				width: 70%;
+				min-width: 400px;
+				margin: 40px auto;
+			}
+
+			#pricing {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				width: 70%;
+				margin: 40px auto;
+			}
+
+			.package {
+				border: solid 1px gray;
+				padding: 0 30px 20px 30px;
+			}
+
+			footer {
+				height: 70px;
+				width: 100%;
+				background-color: #DCEEC8;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+			}
+
+			@media (max-width: 600px) {
   
 			}
 		</style>
@@ -32,24 +123,59 @@
 		    	<a class="nav-link" href="#howitworks">How It Works</a>
 		   	 	<a class="nav-link" href="#pricing">Pricing</a>
 		  	</nav>
-		<header>
+		</header>
 		<main>
 		  	<div class="container">
-		    	<h3>Get your own portrait</h3>
+		    	<h1>Get your own portrait</h1>
 		    	<form id="form" action="https://www.freecodecamp.org/email-submit" method="POST">
-		      		<input id="email" type="email" placeholder="Enter your email address" required>
-		      		<input id="submit" type="submit" value="SUBMIT">
+		      		<input id="email" type="email" name="email" placeholder="Enter your email address" required>
+		      		<input id="submit" type="submit" name="submit" value="SUBSCRIBE">
 		    	</form>
 		  	</div>
 		  	<div class="container">
-		    	<section id="features"></section>
-		    	<section id="howitworks">
-		      		<video id="video" width="320" height="240" controls>
-		        		<source src="https://www.youtube.com/watch?v=-c3L90nsesw" type="video/mpeg">  
-		      		<video>
+		    	<section id="features">
+		    		<div>
+		    			<h3>Ultricies integer quis auctor elit</h3>
+		    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam sollicitudin tempor id eu nisl nunc.</p>
+		    		</div>
+		    		<div>
+		    			<h3>Quam lacus suspendisse faucibus</h3>
+		    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		    		</div>
+		    		<div>
+		    			<h3>Dictumst vestibulum rhoncus est pellentesque elit ullamcorper</h3>
+		    			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices in iaculis nunc sed augue.</p>
+		    		</div>
 		    	</section>
-		    	<section id="pricing"></section>
+
+		    	<section id="howitworks">
+		    		<iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/-c3L90nsesw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+		    	</section>
+
+		    	<section id="pricing">
+		    		<div class="package">
+		    			<h3>PACK1</h3>
+		    			<h2>$100</h2>
+		    			<p>Lorem ipsum.<br>Lorem ipsum.<br>Lorem ipsum dolor.<br>Lorem ipsum.</p>
+		    			<button>SELECT</button>
+		    		</div>
+		    		<div class="package">
+		    			<h3>PACK3</h3>
+		    			<h2>$150</h2>
+		    			<p>Lorem ipsum.<br>Lorem ipsum.<br>Lorem ipsum dolor.<br>Lorem ipsum.</p>
+		    			<button>SELECT</button>
+		    		</div>
+		    		<div class="package">
+		    			<h3>PACK3</h3>
+		    			<h2>$200</h2>
+		    			<p>Lorem ipsum.<br>Lorem ipsum.<br>Lorem ipsum dolor.<br>Lorem ipsum.</p>
+		    			<button>SELECT</button>
+		    		</div>
+		    	</section>
 		  	</div>
 		</main>
+		<footer>
+			<p><b>Created by Thu</b></p>
+		</footer>
 	</body>
 </html>
